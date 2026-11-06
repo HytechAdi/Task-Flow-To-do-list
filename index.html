@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do List</title>
+
+    <meta name="description" content="TaskFlow is a simple and modern to-do list app to organize your daily tasks and stay productive.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+
+            <a href="#" class="logo" aria-label="TaskFlow Home">
+                TaskFlow<span>.</span>
+            </a>
+
+            <p class="tagline">
+                Plan your day. Get things done.
+            </p>
+
+        </header>
+
+
+        <!-- Main To-Do Card -->
+        <section class="todo-card">
+
+            <!-- Workspace Heading -->
+            <div class="section-heading">
+
+                <div class="heading-content">
+
+                    <p class="eyebrow">
+                        YOUR WORKSPACE
+                    </p>
+
+                    <h1>My Tasks</h1>
+
+                    <p class="subtitle">
+                        Small steps lead to big results.
+                    </p>
+
+                </div>
+
+                <div class="date-badge" id="current-date">
+                    Today
+                </div>
+
+            </div>
+
+
+            <!-- Add Task Form -->
+            <form class="task-form" id="task-form">
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="What needs to be done?"
+                        maxlength="200"
+                        autocomplete="off"
+                        aria-label="Enter a new task"
+                    >
+
+                </div>
+
+                <button type="submit" class="add-btn">
+                    <span class="plus-icon">+</span>
+                    <span>Add Task</span>
+                </button>
+
+            </form>
+
+
+            <!-- Error Message -->
+            <p
+                id="error-message"
+                class="error-message"
+                role="alert"
+                aria-live="polite"
+            ></p>
+
+
+            <!-- Task Statistics -->
+            <section class="task-stats" aria-label="Task statistics">
+
+                <div class="stat-box total-box">
+
+                    <div class="stat-icon total-icon">
+                        <span>☰</span>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span class="stat-number" id="total-count">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Total Tasks
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-box pending-box">
+
+                    <div class="stat-icon pending-icon">
+                        <span>◷</span>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span class="stat-number" id="pending-count">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Pending
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-box completed-box">
+
+                    <div class="stat-icon completed-icon">
+                        <span>✓</span>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span class="stat-number" id="completed-count">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Task List Heading -->
+            <div class="list-heading">
+
+                <div>
+                    <h2>Today's List</h2>
+
+                    <p class="list-subtitle">
+                        Keep moving forward, one task at a time.
+                    </p>
+                </div>
+
+                <span class="list-label">
+                    YOUR TASKS
+                </span>
+
+            </div>
+
+
+            <!-- Tasks will be added here by JavaScript -->
+            <ul
+                id="task-list"
+                class="task-list"
+                aria-label="Your tasks"
+            ></ul>
+
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h3>Nothing on your list yet</h3>
+
+                <p>
+                    Add your first task and start making progress.
+                </p>
+
+            </div>
+
+
+            <!-- Card Footer -->
+            <footer class="card-footer">
+
+                <p class="footer-message">
+                    <span class="footer-check">✓</span>
+                    One task at a time. You've got this!
+                </p>
+
+                <button
+                    type="button"
+                    id="clear-completed"
+                    class="clear-btn"
+                >
+                    Clear completed
+                </button>
+
+            </footer>
+
+        </section>
+
+
+        <!-- Page Footer -->
+        <footer class="page-footer">
+
+            <p>
+                Made with care using
+                <span>HTML</span>,
+                <span>CSS</span> &
+                <span>JavaScript</span>.
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
